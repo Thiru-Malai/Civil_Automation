@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    margin: 0px;
+    height: auto;
+}
+
+body{
+    margin: 0px;
+    height: 100vh;
+    min-height: auto;
+    background-color: rgb(48,48,48);
+}
+
+.user{
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    font-family: 'Raleway';
+}
+
+.left{
+    width: 30%;
+    border-right: 1px solid grey;
+    left: 0;
+    color: rgb(48, 48, 48);
+    background-color: #FFFF;
+}
+
+.right{
+    width: 70%;
+    right: 0;
+    color: white;
+    background-color: rgb(56, 56, 65);
+}
+
+#user-left-elements{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    text-align: center;
+    align-items: center;
+}
+
+#user-right-elements{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    text-align: center;
+    align-items: center;
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.user-details{
+    text-align: left;
+}
+
+.edit-profile{
+    text-align: left;
+}
+
+input{
+    font-size: 1rem ;
+    font-family: 'Raleway';
+    padding: 4px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 240px;
+    text-decoration: none;
+    border: none;
+    background: none;
+    color:grey;
+    border-bottom: 1px solid grey;
+    outline:none;
+}
+
+input :active{
+    background: none;
+    outline: none;
+    border: none;
+}
+
+
+
+
+#update{
+    font-size: 1.2rem;
+    color: rgb(48,48,48);
+    background-color: white;
+    border: 2px solid white;
+}
+
+
+#logins{
+    font-size: 1.2rem;
+    color: white;
+    border: 2px solid grey;
+}
+
+.form{
+    display: inline-block;
+}
+
+.profile-image{
+    position: absolute;
+    right: -400px;
+    border: 1px solid white;
+}

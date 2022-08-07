@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>
+        User Registeration
+    </title>
+    <link rel="stylesheet" href="assets/css/user-registeration.css">
+</head>
+
+<body>
+    <div>
+        <div class="user left">
+            <div id="user-left-elements">
+                Hello
+            </div>
+        </div>
+        <div class="user right">
+            <div id="user-right-elements">
+                <div class="sign-in" id="sign-in">
+                    <div class="Sign">Sign In</div>
+                    <div class="form">
+                        <form action="login.php" method="post">
+                            <input type="email" name="email" placeholder="Email" id="email" required>
+                            <br>
+                            <input type="password" name="password" placeholder="Password" id="password" required>
+                            <br>
+                            <input type="submit" name="login" name="login" value="Login " id="login" required>
+                            <br>
+                            <input type="button" name="signup" name="signup" value="Sign Up" id="signup" onclick="showSignUp()">
+                        </form>
+                    </div>
+                </div>
+                <div class="sign-up" id="sign-up" style="display: none;">
+                    <div class="Sign">Sign Up</div>
+                    <div class="form">
+                        <form action="signup.php" method="post">
+                            <input type="text" name="names" placeholder="Name" id="names" required>
+                            <br>
+                            <input type="number" name="ids" placeholder="Id" id="ids" required>
+                            <br> 
+                            <input type="email" name="emails" placeholder="Email" id="emails" required>
+                            <br>
+                            <input type="number" name="phonenum" placeholder="Phone Number" id="phonenum" required>
+                            <br>
+                            <input type="password" name="passwords" placeholder="Password" id="passwords" required>
+                            <br>
+                            <input type="submit" name="signup" name="signup" value="Sign Up" id="signups">
+                            <br>
+                            <input type="button" name="login" name="login" value="Login" id="logins" onclick="showLogin()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function showSignUp(){
+        document.getElementById('sign-up').style.display = "block";
+        document.getElementById('sign-in').style.display = "none";
+
+    }
+
+
+    function showLogin(){
+        document.getElementById('sign-in').style.display = "block";
+        document.getElementById('sign-up').style.display = "none";
+
+    }
+    
+</script>
+
+</html>
