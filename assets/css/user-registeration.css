@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-* { 
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     margin: 0px;
     height: auto;
 }
 
-body{
+body {
     margin: 0px;
     height: 100vh;
     min-height: auto;
-    background-color: rgb(48,48,48);
+    background-color: rgb(48, 48, 48);
 }
 
-.user{
+.user {
     height: 100%;
     width: 50%;
     position: fixed;
@@ -28,44 +29,40 @@ body{
     font-family: 'Raleway';
 }
 
-.left{
+.left {
     left: 0;
     color: white;
     background-color: rgb(77, 173, 185);
 }
 
-.right{
+.right {
     right: 0;
     color: white;
     background-color: rgb(56, 56, 65);
 }
 
-#user-left-elements{
+#user-left-elements {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    align-items: center;
+    top: 20%;
+    left: 20%;
 }
 
-#user-right-elements{
+#user-right-elements {
     position: absolute;
     top: 30%;
-    left: 40%;
+    left: 36%;
     text-align: center;
     align-items: center;
 }
 
 
 
-
-
-.Sign{
+.Sign {
     font-size: 36px;
 }
 
-input{
-    font-size: 1rem ;
+input {
+    font-size: 1rem;
     font-family: 'Raleway';
     padding: 4px;
     margin-top: 10%;
@@ -74,41 +71,101 @@ input{
     text-decoration: none;
     border: none;
     background: none;
-    color:grey;
+    color: grey;
     border-bottom: 1px solid grey;
-    outline:none;
+    outline: none;
 }
 
-input :active{
+input :active {
     background: none;
     outline: none;
     border: none;
 }
 
-#signup{
+#signup {
     font-size: 1.2rem;
-    color: rgb(48,48,48);
+    color: rgb(48, 48, 48);
     background-color: white;
     border: 2px solid white;
 }
 
 
-#login{
+#login {
     font-size: 1.2rem;
     color: white;
     border: 2px solid grey;
 }
 
-#signups{
+#signups {
     font-size: 1.2rem;
-    color: rgb(48,48,48);
+    color: rgb(48, 48, 48);
     background-color: white;
     border: 2px solid white;
 }
 
 
-#logins{
+#logins {
     font-size: 1.2rem;
     color: white;
     border: 2px solid grey;
 }
+
+
+@keyframes sub-title {
+    0% {
+        opacity: 0%;
+    }
+
+    75% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.sub-title {
+    text-align: center;
+    padding-bottom: 48px;
+    font-size: 48px;
+    animation: sub-title 4s;
+}
+
+@keyframes title {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.title {
+    text-align: center;
+    animation: title 4s;
+}
+
+@keyframes image-anim {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    75% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.image {
+    animation: image-anim 4s;
+}
+

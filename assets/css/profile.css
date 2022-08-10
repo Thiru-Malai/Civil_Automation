@@ -124,3 +124,10 @@ input :active{
     right: -400px;
     border: 1px solid white;
 }
+
+#delete {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    background-color: none;
+    border: 2px solid grey;
+}

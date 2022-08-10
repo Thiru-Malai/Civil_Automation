@@ -1,19 +1,18 @@
-<?php 
+<?php
 session_start();
 include 'dbconnect.php';
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
 
-    function validate($data){
+    function validate($data)
+    {
+        $data = trim($data);
 
-       $data = trim($data);
+        $data = stripslashes($data);
 
-       $data = stripslashes($data);
+        $data = htmlspecialchars($data);
 
-       $data = htmlspecialchars($data);
-
-       return $data;
-
+        return $data;
     }
 
     $email = validate($_POST['email']);
@@ -29,18 +28,16 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         header("Location: index.php?error=User Name is required");
 
         exit();
-
-    }else if(empty($pass)){
+    } else if (empty($pass)) {
 
         header("Location: index.php?error=Password is required");
 
         exit();
-
-    }else{
+    } else {
 
         $sql = "SELECT * FROM user_details WHERE email='$email' AND password='$password'";
 
-        $result = mysqli_query($conn,$sql);
+        $result = mysqli_query($conn, $sql);
         $rows = (int)mysqli_num_rows($result);
 
         if ($rows > 0) {
@@ -56,38 +53,31 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 $_SESSION['name'] = $row['name'];
 
                 $_SESSION['profile'] = $row['profile'];
-                
+
 
                 $email = $row['email'];
                 $name = $row['name'];
-                
+
                 header("Location: index.php");
 
                 exit();
+            } else {
 
-            }else{
-                
-                header("Location: index.php?error=Incorect User name or password");
+                header("Location: userregisteration.html?error=Incorrect User name or password");
 
                 exit();
-
             }
-
-        }else{
+        } else {
             echo $password;
 
-            header("Location: index.php?error=Incorrect User name or password");
+            header("Location: userregisteration.html?error=Sign Up To Continue");
 
             exit();
-
         }
-
     }
+} else {
 
-}else{
-
-    header("Location: index.php");
+    header("Location: userregisteration.html");
 
     exit();
-
 }

@@ -103,6 +103,9 @@ if ($rows > 0) {
                         <input type="number" name="phonenum" placeholder="Phone Number" id="phonenum" required>
                         <br>
                         <input type="submit" name="update" name="update" value="Update" id="update">
+                        <br>
+                        <input type="button" name="delete" name="delete" value="Delete" id="delete" onclick="deleteUser()">
+
                     </form>
                 </span>
                 <span class="profile-image">
@@ -116,8 +119,17 @@ if ($rows > 0) {
 </body>
 
 <script>
-    function goBack(){
+    function goBack() {
         location.href = "index.php";
+    }
+
+    function deleteUser() {
+        var confirmation = window.prompt("Do You Want To Delete Your Account\nIf Yes Type Yes Or Else Type No");
+        if (confirmation.match('Yes')) {
+            window.location.assign('deleteuser.php');
+        } else {
+            window.alert("Cancelled");
+        }
     }
 </script>
 

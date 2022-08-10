@@ -11,7 +11,11 @@
     <div>
         <div class="user left">
             <div id="user-left-elements">
-                Hello
+                <div class="sub-title">Civil Automation</div>
+                <center><img class="image" src="assets\images\User-Registeration\Grill.png" width="320px"
+                        height="320px"></center>
+                <br>
+                <div class="title">Analyze, Find And Correct</div>
             </div>
         </div>
         <div class="user right">
@@ -26,7 +30,8 @@
                             <br>
                             <input type="submit" name="login" name="login" value="Login " id="login" required>
                             <br>
-                            <input type="button" name="signup" name="signup" value="Sign Up" id="signup" onclick="showSignUp()">
+                            <input type="button" name="signup" name="signup" value="Sign Up" id="signup"
+                                onclick="showSignUp()">
                         </form>
                     </div>
                 </div>
@@ -37,7 +42,7 @@
                             <input type="text" name="names" placeholder="Name" id="names" required>
                             <br>
                             <input type="number" name="ids" placeholder="Id" id="ids" required>
-                            <br> 
+                            <br>
                             <input type="email" name="emails" placeholder="Email" id="emails" required>
                             <br>
                             <input type="number" name="phonenum" placeholder="Phone Number" id="phonenum" required>
@@ -46,7 +51,8 @@
                             <br>
                             <input type="submit" name="signup" name="signup" value="Sign Up" id="signups">
                             <br>
-                            <input type="button" name="login" name="login" value="Login" id="logins" onclick="showLogin()">
+                            <input type="button" name="login" name="login" value="Login" id="logins"
+                                onclick="showLogin()">
                         </form>
                     </div>
                 </div>
@@ -56,19 +62,18 @@
 </body>
 
 <script>
-    function showSignUp(){
+    function showSignUp() {
         document.getElementById('sign-up').style.display = "block";
         document.getElementById('sign-in').style.display = "none";
 
     }
 
 
-    function showLogin(){
+    function showLogin() {
         document.getElementById('sign-in').style.display = "block";
         document.getElementById('sign-up').style.display = "none";
 
     }
-    
 </script>
 
 </html>
